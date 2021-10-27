@@ -227,8 +227,8 @@ def aws_summary_attachment(sender,receiver,firstName,UserName):
     msg.attach(content)
 
     # Convert message to string and send
-    client = boto3.client('ses',aws_access_key_id='AKIA4UPCQC3QVCPS6JUD',
-    aws_secret_access_key='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')
+    client = boto3.client('ses',aws_access_key_id=os.environ.get("ACCESS_KEY"),
+    aws_secret_access_key=os.environ.get("SECRET_KEY"))
     response = client.send_raw_email(
         Source=sender,
         Destinations=[receiver],
