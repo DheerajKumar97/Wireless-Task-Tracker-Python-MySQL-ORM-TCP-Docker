@@ -1,0 +1,6 @@
+# Build TCP Server
+sudo docker build  -f wtt_http_server.Dockerfile -t wtt-http-server-1-0 .
+
+# Open a new terminal in debian
+# Start web server app. Port 8080 is default port for webserver
+sudo docker run -p 5500:5500 -it --rm --name wtt-http-server-1-0-app --net="host" wtt-http-server-1-0

@@ -1,0 +1,8 @@
+# Docker commands To run in raspberry pi debian
+
+1) sudo docker build -t wtt-mysql-db .
+2) sudo docker run -d -p 3307:3306 --name wtt-mysql-db-app -e MYSQL_ROOT_PASSWORD=root64 wtt-mysql-db
+3) sudo docker exec -it wtt-mysql-db-app bash
+4) mysql -uroot -p
+5) mysql> show databases;
+6) mysql> show tables;

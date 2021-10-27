@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "28dd7bb0-4404-432e-8da6-7ef1c65bbbc4",
+		"name": "wireless_tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	
+	"item": [
+		{
+			"name": "wtt_auth",
+			"item": [
+				{
+					"name": "/wtt/auth/user/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userName\": \"Dheeraj1997\",\"password\": \"password\",\"firstName\":\"Dheeraj\",\"lastName\":\"Kumar\",\"emailId\":\"engineerdheeraj1997@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/auth/user/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"auth",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userName\": \"Dheeraj1997\",\"password\": \"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/auth/user/logo-upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Bearer R5hsDPY6zfrB5FqHrjmhfDzYQBEYpnfMs5x5RH9ZzixJIZMJgD7hj1HQXasUBmiB4jOkdPdpWibS7pYk3ZQ3cnR5ecAIAJsFA6XIdBfS3msvrLSWi4HRDDq0ncqe3QpyoVZjpnUAdT0BH3up9NmK3tRduVL7gDg1wgvhJhGUzmCDWPo7ZsYY1xDpo9EwjC8UZQGJ0Hf8tchpUKHzMHrixS2K9KHHA5psVnYqwX9KNf0mQL8THHGkktZNAyjhClnJyvIr2zKgKTFtEAFNVX0Nmp7fH0VFmFkNWVrp66TQAXCflaBs1bhZ4cR6hrm66pfqVxzcUI2RLa0PHbsfzyE1wgpI7pgx8opAA0YvTRN0XeFn5hpGbEdQVst2e6uBn7TDrWc2mugBYvW4YegK",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Image",
+									"type": "file",
+									"src": "python.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/auth/user/logo-upload",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"auth",
+								"user",
+								"logo-upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wtt_card",
+			"item": [
+				{
+					"name": "/wtt/card/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer EFNneic904BHFu3wdeIYXWATk7zlQniNFh2dnxxxCm2QVbF1fhOXtyn7aiC208sdEXIwoxM4SPyFYlVEsRLQBDSy6eDCeHE4IOKWLYWGFK1lcAwGNGxJLppOgYZmLcBEACVf78eKg5MAcl5tc867ZamMAHTcyktJXFCVDfqD0FOA84SO5HuI1rCnDvjKdG90KJCAfhf7uqKo8i5n6Gwq7jn2bRwCDRvujs4Cs45gZPemE2RbAzXIuxtY3kcoTHO9ljFe99TMHgN4aKMEM0vKuOOZaxAMzDyZnqwnsmd8vsgwudJHEivNgVa1CBV2j7sU3btX079HSIzQVxiyCsqtHxzI3xglGwudT13eycYOPsQZLvWNqZY0Jogai0C7hZSpD1biZMEGY6uY53dp",
+								"type": "text"
+							},
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cardName\":\"MultiThreading Implementation\",\"cardContent\":\"MultiThreading should be implemented for the Flask API, make the Flask API to run in 6 threads for every HTTP request\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/card/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"card",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/card/update_status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Bearer f4cPp6ak0TTJU4UPmYgHgc0FzgNaM8uAq1u8s2Q9lx9u6NVc1c2bIizAtDrjyeGFv5YGi8x405Z0eJgUmlKerHbdoHzKrJ0aIM1NPm9hTLKghu9wLLaxnb5AVOx1Nr9GJt7Flt4ukgX2JqnfqYqfElRrLpkyG6ZLGcUWTwFf7ZpVPIeY2I01hbccjXUL0VMWg5jfLkd3DUX3ZLxBui2HlCKsm10b77qA7eCGBNVCwTYeKBrfFDJq8GzsjLibu0eYSVEte7YPyHMFOGw6RJnIxB2i3yLjvAlpGyBBtpwdPOFB9C9Nm5eTzxR5Zt7kZehpDZ3un0hTcfa87DcAsn8cvNEZWZYi4KcvLE2ZwyxExy68qgPgpo4MrpH2hpQC7AmUxByfk0DyVu3J1N1L",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cardId\": 35, \"cardStatus\": \"created\", \"cardAssociated\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/card/update_status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"card",
+								"update_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/card/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Bearer f4cPp6ak0TTJU4UPmYgHgc0FzgNaM8uAq1u8s2Q9lx9u6NVc1c2bIizAtDrjyeGFv5YGi8x405Z0eJgUmlKerHbdoHzKrJ0aIM1NPm9hTLKghu9wLLaxnb5AVOx1Nr9GJt7Flt4ukgX2JqnfqYqfElRrLpkyG6ZLGcUWTwFf7ZpVPIeY2I01hbccjXUL0VMWg5jfLkd3DUX3ZLxBui2HlCKsm10b77qA7eCGBNVCwTYeKBrfFDJq8GzsjLibu0eYSVEte7YPyHMFOGw6RJnIxB2i3yLjvAlpGyBBtpwdPOFB9C9Nm5eTzxR5Zt7kZehpDZ3un0hTcfa87DcAsn8cvNEZWZYi4KcvLE2ZwyxExy68qgPgpo4MrpH2hpQC7AmUxByfk0DyVu3J1N1L",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cardId\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/card/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"card",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/card/edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Bearer f4cPp6ak0TTJU4UPmYgHgc0FzgNaM8uAq1u8s2Q9lx9u6NVc1c2bIizAtDrjyeGFv5YGi8x405Z0eJgUmlKerHbdoHzKrJ0aIM1NPm9hTLKghu9wLLaxnb5AVOx1Nr9GJt7Flt4ukgX2JqnfqYqfElRrLpkyG6ZLGcUWTwFf7ZpVPIeY2I01hbccjXUL0VMWg5jfLkd3DUX3ZLxBui2HlCKsm10b77qA7eCGBNVCwTYeKBrfFDJq8GzsjLibu0eYSVEte7YPyHMFOGw6RJnIxB2i3yLjvAlpGyBBtpwdPOFB9C9Nm5eTzxR5Zt7kZehpDZ3un0hTcfa87DcAsn8cvNEZWZYi4KcvLE2ZwyxExy68qgPgpo4MrpH2hpQC7AmUxByfk0DyVu3J1N1L",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/card/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"card",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wtt/card/associate_user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "portalDNS",
+								"value": "wireless_tracker",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "Bearer t0lgHmyiJZaP3lgpS6uFmpcMx59AoxKIFsG1Ksci86nWCO0JFm2TPGIyNcboifbFr79cRhmxlCHj2Eo2oOYIObXbtDJUmRWyMgp0HytQZTiREAkMbzMAOBz0CB2sMU70Nammue0s4x8Bk7hEbbjfQIsv2JGpF3ss2TnxE25mywFqu5EmrRbZsZYhN0JdEAJ7q3QLKxRuHRoismOHWrXdHohBFzEdHwkfIb0tqpfcNuPD2wAH9iRWsR6y5EGEfYgz3rKSoUWMZpEUDE2wvJHmMx3UkqdwGDrHJEx76xL0XQrXqMoTEUasNWjgsYPu2RAomFXxstS13k4Bush5QPrBIMRXamAh9hKAtW9eTZNe5R27UPX5tpDwnbl9m5rbspSKAhbeWCKtkdNMZq13",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cardId\": 1, \"userId\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5500/wtt/card/associate_user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5500",
+							"path": [
+								"wtt",
+								"card",
+								"associate_user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
