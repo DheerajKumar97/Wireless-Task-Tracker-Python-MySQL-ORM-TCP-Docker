@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
 import logging
-# import os
+# import pandas as pd
 
 env_path = './config.env'
 load_dotenv(dotenv_path=env_path)
